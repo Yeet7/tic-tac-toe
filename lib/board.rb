@@ -10,6 +10,7 @@ class Board
 
   # Player One always starts first, Turn can be found with 9-(turn) to see which player made the move.
   def update(turn, number)
+    number = Integer(number)
     if turn.even?
       # [((number - 1.0) / 3).floor] => Calculates Row
       # [(number - 1) % 3]
