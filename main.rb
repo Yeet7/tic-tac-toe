@@ -11,11 +11,11 @@ module Game
     # Play the game
     def play_game
       board = Board.new
-      puts board.board_grid
+      board.print_board(board.board_grid)
       (1...10).each do |i|
         placement = play_turn(i)
         board.update(i, placement)
-        puts board.board_grid
+        board.print_board(board.board_grid)
       end
     end
 

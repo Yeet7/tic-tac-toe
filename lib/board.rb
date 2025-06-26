@@ -8,6 +8,14 @@ class Board
     self.board_grid = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
   end
 
+  def print_board(board_grid)
+    puts "#######"
+    board_grid.each do |row|
+      puts "##{row[0]}##{row[1]}##{row[2]}#"
+      puts "#######"
+    end
+  end
+
   # Player One always starts first, Turn can be found with 9-(turn) to see which player made the move.
   def update(turn, number)
     number = Integer(number)
