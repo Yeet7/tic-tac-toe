@@ -16,6 +16,10 @@ module Game
         placement = play_turn(i)
         board.update(i, placement)
         board.print_board(board.board_grid)
+        if board.winner?(i, board.board_grid)
+          puts "Player #{i.odd? ? 'One' : 'Two'} wins!"
+          break
+        end
       end
     end
 
